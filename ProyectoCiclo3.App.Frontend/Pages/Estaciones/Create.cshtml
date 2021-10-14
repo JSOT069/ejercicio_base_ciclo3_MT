@@ -1,15 +1,22 @@
 @page
+@model ProyectoCiclo3.App.Frontend.Pages.FormEstacionModel
 @{
 }
  
 <div class="text-center">
-<form action="">
-  <label for="nombre" class="form-label">Nombre:</label>
+<form method="POST">
+  @*<label for="id" class="form-label">id:</label>
+  <input type="number" class="form-control" id="id" name="id" placeholder="id">*@
+  <label for="Nombre" class="form-label">Nombre:</label>
   <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
-  <label for="edad" class="form-label">Edad:</label>
-  <input type="number" class="form-control" id="edad" name="edad" placeholder="Edad">
-  <label for="email" class="form-label">Email:</label>
-  <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+  <label for="Dirección" class="form-label">Dirección:</label>
+  <input type="text" class="form-control" id="dirección" name="dirección" placeholder="Dirección">
+  <label for="Coord. x" class="form-label">Coord. x:</label>
+  <input type="number" class="form-control" id="coord_x" name="coord_x" placeholder="Coord. x">
+  <label for="Coord. y" class="form-label">Coord. y:</label>
+  <input type="number" class="form-control" id="coord_y" name="coord_y" placeholder="Coord. y">
+  <label for="Tipo" class="form-label">Tipo:</label>
+  <input type="text" class="form-control" id="Tipo" name="Tipo" placeholder="Tipo">
   <hr>
   <button type="submit" class="btn btn-success">Enviar</button>
 </form>

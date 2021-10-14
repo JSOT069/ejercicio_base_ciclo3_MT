@@ -1,15 +1,30 @@
 @page
+@model ProyectoCiclo3.App.Frontend.Pages.FormRutaModel
 @{
 }
  
 <div class="text-center">
-<form action="">
-  <label for="nombre" class="form-label">Nombre:</label>
-  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
-  <label for="edad" class="form-label">Edad:</label>
-  <input type="number" class="form-control" id="edad" name="edad" placeholder="Edad">
-  <label for="email" class="form-label">Email:</label>
-  <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+<form method="POST">
+  @*<label for="id" class="form-label">id:</label>
+  <input type="number" class="form-control" id="id" name="id" placeholder="id">*@
+  <label for="Origen" class="form-label">Origen:</label>
+  <select asp-for="Ruta.origen" class="form-control" required>
+        <option value="">Selecciona el origen</option>
+        @foreach (var estacion in Model.Estaciones)
+    {
+        <option value="@estacion.id">@estacion.nombre</option>
+    }
+    </select>
+  <label for="Destino" class="form-label">Destino:</label>
+  <select asp-for="Ruta.destino" class="form-control" required>
+        <option value="">Selecciona el destino</option>
+        @foreach (var estacion in Model.Estaciones)
+    {
+        <option value="@estacion.id">@estacion.nombre</option>
+    }
+    </select>
+  <label for="Tiempo estimado" class="form-label">Tiempo estimado:</label>
+  <input type="text" class="form-control" id="tiempo_estimado" asp-for='Ruta.tiempo_estimado' placeholder="Tiempo estimado">
   <hr>
   <button type="submit" class="btn btn-success">Enviar</button>
 </form>

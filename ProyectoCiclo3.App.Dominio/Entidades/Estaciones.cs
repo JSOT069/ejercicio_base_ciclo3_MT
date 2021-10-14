@@ -1,4 +1,5 @@
 using System;
+
 namespace ProyectoCiclo3.App.Dominio{
     public class Estaciones{
         // Se crean los objetos de la clase
@@ -7,7 +8,7 @@ namespace ProyectoCiclo3.App.Dominio{
         public string direccion {get;set;}            
         public float coord_x {get;set;}            
         public float coord_y {get;set;}            
-        public string tipo {get;set;}            
+        public string Tipo {get;set;}            
            
     }
 }
